@@ -11,7 +11,7 @@ ix.poll();
 
 ix.on("error", function(err){
   console.log("Error:" + err)
-  hipChat.sendMessage(197737,"@all Guys, IX IS DOWN")
+  hipChat.sendMessage(197737,"IX Unresponsive!")
   wiringPi.digitalWrite(0,1)
 }) 
 

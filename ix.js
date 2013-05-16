@@ -8,7 +8,7 @@ function nop() {}
 var options = {
   uri: 'https://www.invoicexpress.net',
   method: 'get',
-  timeout: 10000
+  timeout: 5000
 };
 
 function IX(callback) {
@@ -34,7 +34,7 @@ IX.prototype.poll = function() {
   function processRequest(error, response, body) {
     if (error) { _this.emit("error", error, null)  } 
     else { _this.emit("success", null) } 
-    setTimeout(_this.poll.bind(_this) , 30000);
+    setTimeout(_this.poll.bind(_this) , 10000);
   }
 
 }
